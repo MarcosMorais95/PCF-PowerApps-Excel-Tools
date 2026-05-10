@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control
+    namespace="ExportToExcel"
+    constructor="ExportToExcelComponent"
+    version="1.0.13"
+    display-name-key="ExportToExcelComponent_Display"
+    description-key="ExportToExcelComponent_Desc"
+    control-type="standard">
+
+    <external-service-usage enabled="false">
+    </external-service-usage>
+
+    <property name="dataJson"
+              display-name-key="DataJson_Display"
+              description-key="DataJson_Desc"
+              of-type="Multiple"
+              usage="input"
+              required="true" />
+
+    <property name="fileName"
+              display-name-key="FileName_Display"
+              description-key="FileName_Desc"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="false" />
+
+    <property name="sheetName"
+              display-name-key="SheetName_Display"
+              description-key="SheetName_Desc"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="false"
+              default-value="Export" />
+
+    <property name="buttonText"
+              display-name-key="ButtonText_Display"
+              description-key="ButtonText_Desc"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="false"
+              default-value="Export Excel" />
+
+    <property name="showIcon"
+              display-name-key="ShowIcon_Display"
+              description-key="ShowIcon_Desc"
+              of-type="TwoOptions"
+              usage="input"
+              required="false" />
+
+    <property name="isDisabled"
+              display-name-key="IsDisabled_Display"
+              description-key="IsDisabled_Desc"
+              of-type="TwoOptions"
+              usage="input"
+              required="false"
+              default-value="false" />
+
+    <property name="useFieldMapping"
+              display-name-key="UseFieldMapping_Display"
+              description-key="UseFieldMapping_Desc"
+              of-type="TwoOptions"
+              usage="input"
+              required="false"
+              default-value="false" />
+
+    <property name="buttonWidthPx"
+              display-name-key="ButtonWidth_Display"
+              description-key="ButtonWidth_Desc"
+              of-type="Whole.None"
+              usage="input"
+              required="false"
+              default-value="120" />
+
+    <property name="buttonHeightPx"
+              display-name-key="ButtonHeight_Display"
+              description-key="ButtonHeight_Desc"
+              of-type="Whole.None"
+              usage="input"
+              required="false"
+              default-value="32" />
+
+    <property name="fontSizePx"
+              display-name-key="FontSize_Display"
+              description-key="FontSize_Desc"
+              of-type="Whole.None"
+              usage="input"
+              required="false"
+              default-value="12" />
+
+    <property name="backgroundColor"
+              display-name-key="BgColor_Display"
+              description-key="BgColor_Desc"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="false"
+              default-value="#0078d4" />
+
+    <property name="fontColor"
+              display-name-key="FontColor_Display"
+              description-key="FontColor_Desc"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="false"
+              default-value="#ffffff" />
+
+    <property name="borderRadiusPx"
+              display-name-key="BorderRadius_Display"
+              description-key="BorderRadius_Desc"
+              of-type="Whole.None"
+              usage="input"
+              required="false"
+              default-value="6" />
+
+    <resources>
+      <code path="index.ts" order="1" />
+      <resx path="strings/ExportToExcelComponent.1033.resx" version="1.0.0" />
+    </resources>
+
+  </control>
+</manifest>

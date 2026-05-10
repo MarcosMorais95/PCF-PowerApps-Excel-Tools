@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control
+    namespace="PCFImportExcel"
+    constructor="ImportExcel"
+    version="1.0.9"
+    display-name-key="ImportExcel"
+    description-key="ImportExcelDesc"
+    control-type="standard">
+
+    <!-- Bound field required by "field" template (not used by parsing logic) -->
+    <property
+      name="value"
+      display-name-key="Value"
+      description-key="BoundFieldValue"
+      of-type="SingleLine.Text"
+      usage="bound"
+      required="false" />
+
+    <!-- UI Configuration -->
+    <property
+      name="showTitle"
+      display-name-key="ShowTitle"
+      description-key="ShowTitleDesc"
+      of-type="TwoOptions"
+      usage="input"
+      required="false" />
+
+    <property
+      name="title"
+      display-name-key="Title"
+      description-key="TitleDesc"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
+    <property
+      name="showUserGuidelines"
+      display-name-key="ShowUserGuidelines"
+      description-key="ShowUserGuidelinesDesc"
+      of-type="TwoOptions"
+      usage="input"
+      required="false" />
+
+    <property
+      name="userGuidelinesText"
+      display-name-key="UserGuidelinesText"
+      description-key="UserGuidelinesTextDesc"
+      of-type="Multiple"
+      usage="input"
+      required="false" />
+
+    <property
+      name="showStatus"
+      display-name-key="ShowStatus"
+      description-key="ShowStatusDesc"
+      of-type="TwoOptions"
+      usage="input"
+      required="false" />
+
+    <property
+      name="includeFileName"
+      display-name-key="IncludeFileName"
+      description-key="IncludeFileNameDesc"
+      of-type="TwoOptions"
+      usage="input"
+      required="false" />
+
+    <property
+      name="chooseFilesText"
+      display-name-key="ChooseFilesText"
+      description-key="ChooseFilesTextDesc"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
+    <property
+      name="noFileChosenText"
+      display-name-key="NoFileChosenText"
+      description-key="NoFileChosenTextDesc"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
+    <property
+      name="parseButtonText"
+      display-name-key="ParseButtonText"
+      description-key="ParseButtonTextDesc"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
+    <property
+      name="clearButtonText"
+      display-name-key="ClearButtonText"
+      description-key="ClearButtonTextDesc"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
+    <!-- Parsing configuration -->
+    <property
+      name="allowMultipleFiles"
+      display-name-key="AllowMultipleFiles"
+      description-key="AllowMultipleFilesDesc"
+      of-type="TwoOptions"
+      usage="input"
+      required="false" />
+
+    <property
+      name="hasTable"
+      display-name-key="HasTable"
+      description-key="HasTableDesc"
+      of-type="TwoOptions"
+      usage="input"
+      required="false" />
+
+    <property
+      name="tableName"
+      display-name-key="TableName"
+      description-key="TableNameDesc"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
+    <property
+      name="sheetIndex"
+      display-name-key="SheetIndex"
+      description-key="SheetIndexDesc"
+      of-type="Whole.None"
+      usage="input"
+      required="false" />
+
+    <property
+      name="maxRowsToScan"
+      display-name-key="MaxRowsToScan"
+      description-key="MaxRowsToScanDesc"
+      of-type="Whole.None"
+      usage="input"
+      required="false" />
+
+    <property
+      name="enableTrace"
+      display-name-key="EnableTrace"
+      description-key="EnableTraceDesc"
+      of-type="TwoOptions"
+      usage="input"
+      required="false" />
+
+    <!-- Outputs -->
+    <property
+      name="jsonResult"
+      display-name-key="JsonResult"
+      description-key="JsonResultDesc"
+      of-type="Multiple"
+      usage="output"
+      required="false" />
+
+    <property
+      name="meta"
+      display-name-key="Meta"
+      description-key="MetaDesc"
+      of-type="Multiple"
+      usage="output"
+      required="false" />
+
+    <property
+      name="trace"
+      display-name-key="Trace"
+      description-key="TraceDesc"
+      of-type="Multiple"
+      usage="output"
+      required="false" />
+
+    <property
+      name="isValid"
+      display-name-key="IsValid"
+      description-key="IsValidDesc"
+      of-type="TwoOptions"
+      usage="output"
+      required="false" />
+
+    <property
+      name="errorMessage"
+      display-name-key="ErrorMessage"
+      description-key="ErrorMessageDesc"
+      of-type="SingleLine.Text"
+      usage="output"
+      required="false" />
+
+    <resources>
+      <code path="index.ts" order="1" />
+      <resx path="strings/ImportExcel.1033.resx" version="1.0.0" />
+    </resources>
+  </control>
+</manifest>

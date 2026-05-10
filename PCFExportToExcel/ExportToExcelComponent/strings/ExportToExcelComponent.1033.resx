@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExportToExcelComponent_Display" xml:space="preserve">
+    <value>Export to Excel</value>
+  </data>
+  <data name="ExportToExcelComponent_Desc" xml:space="preserve">
+    <value>Renders a button that exports a JSON payload to an .xlsx file.</value>
+  </data>
+  <data name="DataJson_Display" xml:space="preserve">
+    <value>Data JSON</value>
+  </data>
+  <data name="DataJson_Desc" xml:space="preserve">
+    <value>JSON payload to export to Excel.</value>
+  </data>
+  <data name="FileName_Display" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="FileName_Desc" xml:space="preserve">
+    <value>Optional Excel file name.</value>
+  </data>
+  <data name="SheetName_Display" xml:space="preserve">
+    <value>Sheet Name</value>
+  </data>
+  <data name="SheetName_Desc" xml:space="preserve">
+    <value>Name of the worksheet to create.</value>
+  </data>
+  <data name="ButtonText_Display" xml:space="preserve">
+    <value>Button Text</value>
+  </data>
+  <data name="ButtonText_Desc" xml:space="preserve">
+    <value>Label shown on the export button.</value>
+  </data>
+  <data name="ShowIcon_Display" xml:space="preserve">
+    <value>Show Icon</value>
+  </data>
+  <data name="ShowIcon_Desc" xml:space="preserve">
+    <value>Show the Excel icon on the button.</value>
+  </data>
+  <data name="IsDisabled_Display" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="IsDisabled_Desc" xml:space="preserve">
+    <value>Disable the export button.</value>
+  </data>
+  <data name="UseFieldMapping_Display" xml:space="preserve">
+    <value>Use Field Mapping</value>
+  </data>
+  <data name="UseFieldMapping_Desc" xml:space="preserve">
+    <value>Use mapped columns with friendly names and explicit field keys.</value>
+  </data>
+  <data name="ButtonWidth_Display" xml:space="preserve">
+    <value>Button Width</value>
+  </data>
+  <data name="ButtonWidth_Desc" xml:space="preserve">
+    <value>Button width in pixels.</value>
+  </data>
+  <data name="ButtonHeight_Display" xml:space="preserve">
+    <value>Button Height</value>
+  </data>
+  <data name="ButtonHeight_Desc" xml:space="preserve">
+    <value>Button height in pixels.</value>
+  </data>
+  <data name="FontSize_Display" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="FontSize_Desc" xml:space="preserve">
+    <value>Button font size in pixels.</value>
+  </data>
+  <data name="BgColor_Display" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="BgColor_Desc" xml:space="preserve">
+    <value>Button background color.</value>
+  </data>
+  <data name="FontColor_Display" xml:space="preserve">
+    <value>Font Color</value>
+  </data>
+  <data name="FontColor_Desc" xml:space="preserve">
+    <value>Button text color.</value>
+  </data>
+  <data name="BorderRadius_Display" xml:space="preserve">
+    <value>Border Radius</value>
+  </data>
+  <data name="BorderRadius_Desc" xml:space="preserve">
+    <value>Button corner radius in pixels.</value>
+  </data>
+</root>

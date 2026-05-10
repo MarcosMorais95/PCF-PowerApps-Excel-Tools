@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="ImportExcel" xml:space="preserve">
+    <value>Import Excel</value>
+  </data>
+  <data name="ImportExcelDesc" xml:space="preserve">
+    <value>Imports Excel or CSV files and exposes the parsed data as JSON.</value>
+  </data>
+
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="BoundFieldValue" xml:space="preserve">
+    <value>Bound field required by the field template (not used by the parsing logic).</value>
+  </data>
+
+  <data name="ShowTitle" xml:space="preserve">
+    <value>Show Title</value>
+  </data>
+  <data name="ShowTitleDesc" xml:space="preserve">
+    <value>Show or hide the component title.</value>
+  </data>
+
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="TitleDesc" xml:space="preserve">
+    <value>Custom title text for the component.</value>
+  </data>
+
+  <data name="ShowUserGuidelines" xml:space="preserve">
+    <value>Show User Guidelines</value>
+  </data>
+  <data name="ShowUserGuidelinesDesc" xml:space="preserve">
+    <value>Show or hide the user guidelines area.</value>
+  </data>
+
+  <data name="UserGuidelinesText" xml:space="preserve">
+    <value>User Guidelines Text</value>
+  </data>
+  <data name="UserGuidelinesTextDesc" xml:space="preserve">
+    <value>Text shown to the end user as usage guidelines.</value>
+  </data>
+
+  <data name="ShowStatus" xml:space="preserve">
+    <value>Show Status</value>
+  </data>
+  <data name="ShowStatusDesc" xml:space="preserve">
+    <value>Show or hide the status panel.</value>
+  </data>
+
+  <data name="IncludeFileName" xml:space="preserve">
+    <value>Include File Name</value>
+  </data>
+  <data name="IncludeFileNameDesc" xml:space="preserve">
+    <value>Include the source file name on each parsed row.</value>
+  </data>
+
+  <data name="ChooseFilesText" xml:space="preserve">
+    <value>Choose Files Text</value>
+  </data>
+  <data name="ChooseFilesTextDesc" xml:space="preserve">
+    <value>Custom label for the file picker button.</value>
+  </data>
+
+  <data name="NoFileChosenText" xml:space="preserve">
+    <value>No File Chosen Text</value>
+  </data>
+  <data name="NoFileChosenTextDesc" xml:space="preserve">
+    <value>Custom label shown when no file has been selected.</value>
+  </data>
+
+  <data name="ParseButtonText" xml:space="preserve">
+    <value>Parse Button Text</value>
+  </data>
+  <data name="ParseButtonTextDesc" xml:space="preserve">
+    <value>Custom label for the parse button.</value>
+  </data>
+
+  <data name="ClearButtonText" xml:space="preserve">
+    <value>Clear Button Text</value>
+  </data>
+  <data name="ClearButtonTextDesc" xml:space="preserve">
+    <value>Custom label for the clear button.</value>
+  </data>
+
+  <data name="AllowMultipleFiles" xml:space="preserve">
+    <value>Allow Multiple Files</value>
+  </data>
+  <data name="AllowMultipleFilesDesc" xml:space="preserve">
+    <value>Allow the user to select more than one file at a time.</value>
+  </data>
+
+  <data name="HasTable" xml:space="preserve">
+    <value>Has Table</value>
+  </data>
+  <data name="HasTableDesc" xml:space="preserve">
+    <value>If true, parses a named Excel table instead of a worksheet range.</value>
+  </data>
+
+  <data name="TableName" xml:space="preserve">
+    <value>Table Name</value>
+  </data>
+  <data name="TableNameDesc" xml:space="preserve">
+    <value>Name of the Excel table to parse (used when Has Table is enabled).</value>
+  </data>
+
+  <data name="SheetIndex" xml:space="preserve">
+    <value>Sheet Index</value>
+  </data>
+  <data name="SheetIndexDesc" xml:space="preserve">
+    <value>Zero-based index of the worksheet to parse.</value>
+  </data>
+
+  <data name="MaxRowsToScan" xml:space="preserve">
+    <value>Max Rows To Scan</value>
+  </data>
+  <data name="MaxRowsToScanDesc" xml:space="preserve">
+    <value>Maximum number of rows to scan when detecting the header row (5-200, default 50).</value>
+  </data>
+
+  <data name="EnableTrace" xml:space="preserve">
+    <value>Enable Trace</value>
+  </data>
+  <data name="EnableTraceDesc" xml:space="preserve">
+    <value>Enable detailed trace logging on the trace output property.</value>
+  </data>
+
+  <data name="JsonResult" xml:space="preserve">
+    <value>JSON Result</value>
+  </data>
+  <data name="JsonResultDesc" xml:space="preserve">
+    <value>Parsed data serialized as a JSON array.</value>
+  </data>
+
+  <data name="Meta" xml:space="preserve">
+    <value>Meta</value>
+  </data>
+  <data name="MetaDesc" xml:space="preserve">
+    <value>Metadata about the parsing operation (files, mode, headers, etc.).</value>
+  </data>
+
+  <data name="Trace" xml:space="preserve">
+    <value>Trace</value>
+  </data>
+  <data name="TraceDesc" xml:space="preserve">
+    <value>Detailed trace log when Enable Trace is true.</value>
+  </data>
+
+  <data name="IsValid" xml:space="preserve">
+    <value>Is Valid</value>
+  </data>
+  <data name="IsValidDesc" xml:space="preserve">
+    <value>True when the last parsing attempt completed successfully.</value>
+  </data>
+
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Error Message</value>
+  </data>
+  <data name="ErrorMessageDesc" xml:space="preserve">
+    <value>Human-readable error message when parsing fails.</value>
+  </data>
+</root>

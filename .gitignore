@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+out/
+obj/
+bin/
+generated/
+
+# IDE
+*.user
+.vs/
+.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PAC / solution packaging
+*.zip

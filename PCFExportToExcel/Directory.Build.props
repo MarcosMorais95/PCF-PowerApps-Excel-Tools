@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup Condition="'$(MSBuildProjectExtension)' == '.cdsproj'">
+    <SolutionPackagerWorkingDirectory>$([System.IO.Path]::Combine($([System.IO.Path]::GetTempPath()), 'PowerAppsSolutionPackager', '$(MSBuildProjectName)', '$(Configuration)'))\</SolutionPackagerWorkingDirectory>
+  </PropertyGroup>
+</Project>
