@@ -3,7 +3,7 @@
   <control
     namespace="PCFImportExcel"
     constructor="ImportExcel"
-    version="1.0.9"
+    version="1.1.0"
     display-name-key="ImportExcel"
     description-key="ImportExcelDesc"
     control-type="standard">
@@ -17,14 +17,28 @@
       usage="bound"
       required="false" />
 
-    <!-- UI Configuration -->
+    <!-- Display mode: Card (rich UI) or Button (compact) -->
+    <property
+      name="displayMode"
+      display-name-key="DisplayMode"
+      description-key="DisplayModeDesc"
+      of-type="Enum"
+      usage="input"
+      required="false"
+      default-value="Card">
+      <value name="Card" display-name-key="DisplayMode_Card" default="true">Card</value>
+      <value name="Button" display-name-key="DisplayMode_Button">Button</value>
+    </property>
+
+    <!-- UI Configuration (Card mode only) -->
     <property
       name="showTitle"
       display-name-key="ShowTitle"
       description-key="ShowTitleDesc"
       of-type="TwoOptions"
       usage="input"
-      required="false" />
+      required="false"
+      default-value="true" />
 
     <property
       name="title"
@@ -40,7 +54,8 @@
       description-key="ShowUserGuidelinesDesc"
       of-type="TwoOptions"
       usage="input"
-      required="false" />
+      required="false"
+      default-value="true" />
 
     <property
       name="userGuidelinesText"
@@ -56,7 +71,8 @@
       description-key="ShowStatusDesc"
       of-type="TwoOptions"
       usage="input"
-      required="false" />
+      required="false"
+      default-value="true" />
 
     <property
       name="includeFileName"
@@ -66,37 +82,67 @@
       usage="input"
       required="false" />
 
+    <!-- Text customization -->
     <property
-      name="chooseFilesText"
-      display-name-key="ChooseFilesText"
-      description-key="ChooseFilesTextDesc"
+      name="dropzonePrimaryText"
+      display-name-key="DropzonePrimaryText"
+      description-key="DropzonePrimaryTextDesc"
       of-type="SingleLine.Text"
       usage="input"
       required="false" />
 
     <property
-      name="noFileChosenText"
-      display-name-key="NoFileChosenText"
-      description-key="NoFileChosenTextDesc"
+      name="dropzoneHintText"
+      display-name-key="DropzoneHintText"
+      description-key="DropzoneHintTextDesc"
       of-type="SingleLine.Text"
       usage="input"
       required="false" />
 
     <property
-      name="parseButtonText"
-      display-name-key="ParseButtonText"
-      description-key="ParseButtonTextDesc"
+      name="buttonText"
+      display-name-key="ButtonText"
+      description-key="ButtonTextDesc"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false"
+      default-value="Import" />
+
+    <property
+      name="removeButtonText"
+      display-name-key="RemoveButtonText"
+      description-key="RemoveButtonTextDesc"
       of-type="SingleLine.Text"
       usage="input"
       required="false" />
 
+    <!-- Theming -->
     <property
-      name="clearButtonText"
-      display-name-key="ClearButtonText"
-      description-key="ClearButtonTextDesc"
+      name="accentColor"
+      display-name-key="AccentColor"
+      description-key="AccentColorDesc"
       of-type="SingleLine.Text"
       usage="input"
-      required="false" />
+      required="false"
+      default-value="#323130" />
+
+    <property
+      name="backgroundColor"
+      display-name-key="BackgroundColor"
+      description-key="BackgroundColorDesc"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false"
+      default-value="#ffffff" />
+
+    <property
+      name="borderColor"
+      display-name-key="BorderColor"
+      description-key="BorderColorDesc"
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false"
+      default-value="#e1dfdd" />
 
     <!-- Parsing configuration -->
     <property

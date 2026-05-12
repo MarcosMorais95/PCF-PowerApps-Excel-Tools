@@ -1,4 +1,4 @@
-# PCF Export Tools
+# Excel Tools PCF
 
 > Two production-grade PowerApps Component Framework (PCF) controls that bring real Excel import/export to Canvas Apps and Model-driven forms — packaged in a single Dataverse solution.
 
@@ -38,13 +38,20 @@ These two controls solve the problem entirely on the client: the user picks a fi
 
 ### PCFImportExcel — Excel/CSV → JSON
 
-Lets the user pick one or more Excel/CSV files in the browser, parses them, and exposes the data as a JSON string the app can bind to a collection.
+Lets the user pick one or more Excel/CSV files in the browser, parses them **automatically on selection**, and exposes the data as a JSON string the app can bind to a collection. The control fires `OnChange` as soon as parsing finishes — no extra button click needed.
+
+**Two display modes** (selectable via the `displayMode` property):
+- **Card** — rich UI with title, guidelines, drop-zone, drag-and-drop, status panel and file chip with parsed-row stats.
+- **Button** — compact single-button variant for tight layouts. Includes loading spinner and transient success state.
 
 **Highlights**
+- **Auto-parse on selection** — no manual "Parse" click; `OnChange` fires when data is ready.
+- **Drag-and-drop** in Card mode.
 - **Two parsing modes:**
   - **Named table** — locates an Excel table by name across the workbook (works even if the table sits on a different sheet from the active one).
   - **Range** — auto-detects the header row using a scoring heuristic (uniqueness, non-numeric content, density of the next row).
 - **Multi-file** support with a per-row `fileName` tag.
+- **Themeable** — `accentColor`, `backgroundColor`, `borderColor` let the control fit any app theme.
 - **Trace log** output for debugging — every step (file read, sheet selection, header detection, row extraction) is timestamped and labeled.
 - **Strict outputs**: `jsonResult`, `meta`, `trace`, `isValid`, `errorMessage` — so the host app can react granularly.
 
@@ -52,6 +59,7 @@ Lets the user pick one or more Excel/CSV files in the browser, parses them, and 
 
 | Property | Type | Default | Description |
 |---|---|---|---|
+| `displayMode` | Enum | `Card` | `Card` (rich UI) or `Button` (compact) |
 | `hasTable` | TwoOptions | `false` | Parse a named Excel table instead of a worksheet range |
 | `tableName` | Text | — | Name of the Excel table (required when `hasTable = true`) |
 | `sheetIndex` | Whole | `0` | Zero-based worksheet index (range mode only) |
@@ -59,11 +67,15 @@ Lets the user pick one or more Excel/CSV files in the browser, parses them, and 
 | `maxRowsToScan` | Whole | `50` | Rows to scan when detecting the header (5–200) |
 | `includeFileName` | TwoOptions | `false` | Include the source filename on each parsed row |
 | `enableTrace` | TwoOptions | `false` | Enable detailed trace logging |
-| `showTitle` / `title` | TwoOptions / Text | — | Show and customize the component title |
-| `showUserGuidelines` / `userGuidelinesText` | TwoOptions / Multiple | — | Show usage instructions |
-| `showStatus` | TwoOptions | `true` | Show the status panel below the buttons |
-| `chooseFilesText` / `noFileChosenText` | Text | — | Localize the file picker labels |
-| `parseButtonText` / `clearButtonText` | Text | — | Localize the action buttons |
+| `showTitle` / `title` | TwoOptions / Text | `true` / — | Show and customize the component title (Card mode) |
+| `showUserGuidelines` / `userGuidelinesText` | TwoOptions / Multiple | `true` / — | Show usage instructions (Card mode) |
+| `showStatus` | TwoOptions | `true` | Show the status panel (Card mode) |
+| `dropzonePrimaryText` / `dropzoneHintText` | Text | — | Localize the dropzone labels (Card mode) |
+| `buttonText` | Text | `Import` | Label for the import button (Button mode) |
+| `removeButtonText` | Text | `Remove` | Label for the remove-file button on the file chip (Card mode) |
+| `accentColor` | Text | `#323130` | Interactive accent color (hex) |
+| `backgroundColor` | Text | `#ffffff` | Card / button background (hex) |
+| `borderColor` | Text | `#e1dfdd` | Card / button border (hex) |
 
 **Outputs**
 
@@ -209,7 +221,7 @@ PCF-Impor&Export/
 │
 ├── Solution/                         # Dataverse solution project (.cdsproj)
 │   ├── Solution.cdsproj              # references both PCFs above
-│   └── src/Other/Solution.xml        # PCFExportTools, publisher: marcosmorais
+│   └── src/Other/Solution.xml        # Excel Tools PCF, publisher: marcosmorais
 │
 ├── .gitignore
 ├── LICENSE                           # MIT
@@ -221,11 +233,11 @@ The `Solution/` project is a standard Dataverse solution that references the two
 | Solution attribute | Value |
 |---|---|
 | Unique name | `PCFExportTools` |
-| Display name | PCF Export Tools |
+| Display name | Excel Tools PCF |
 | Publisher name | `marcosmorais` |
 | Customization prefix | `mm` |
 | Package type | Unmanaged (Dev) |
-| Version | `1.0.0` |
+| Version | `1.1.0` |
 
 ---
 
@@ -296,7 +308,7 @@ pac solution import `
 ### Add a control to a Canvas App
 
 1. In the maker portal, open your app → **Insert** → **Get more components** → **Code** tab.
-2. Pick **Import Excel** and/or **Export to Excel** from the **PCF Export Tools** publisher.
+2. Pick **Import Excel** and/or **Export to Excel** from the **Excel Tools PCF** solution.
 3. Drop the control onto a screen and bind its properties via the formula bar.
 
 ### Version bumps before re-deploy

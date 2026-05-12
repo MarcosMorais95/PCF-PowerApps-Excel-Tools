@@ -17,7 +17,7 @@
     <value>Import Excel</value>
   </data>
   <data name="ImportExcelDesc" xml:space="preserve">
-    <value>Imports Excel or CSV files and exposes the parsed data as JSON.</value>
+    <value>Imports Excel or CSV files and exposes the parsed data as JSON. Parses automatically on file selection.</value>
   </data>
 
   <data name="Value" xml:space="preserve">
@@ -27,39 +27,52 @@
     <value>Bound field required by the field template (not used by the parsing logic).</value>
   </data>
 
+  <data name="DisplayMode" xml:space="preserve">
+    <value>Display Mode</value>
+  </data>
+  <data name="DisplayModeDesc" xml:space="preserve">
+    <value>Choose how the control renders: Card (rich UI with dropzone and title) or Button (compact button only).</value>
+  </data>
+  <data name="DisplayMode_Card" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="DisplayMode_Button" xml:space="preserve">
+    <value>Button</value>
+  </data>
+
   <data name="ShowTitle" xml:space="preserve">
     <value>Show Title</value>
   </data>
   <data name="ShowTitleDesc" xml:space="preserve">
-    <value>Show or hide the component title.</value>
+    <value>Show or hide the component title (Card mode only).</value>
   </data>
 
   <data name="Title" xml:space="preserve">
     <value>Title</value>
   </data>
   <data name="TitleDesc" xml:space="preserve">
-    <value>Custom title text for the component.</value>
+    <value>Custom title text for the component (Card mode only).</value>
   </data>
 
   <data name="ShowUserGuidelines" xml:space="preserve">
     <value>Show User Guidelines</value>
   </data>
   <data name="ShowUserGuidelinesDesc" xml:space="preserve">
-    <value>Show or hide the user guidelines area.</value>
+    <value>Show or hide the user guidelines area (Card mode only).</value>
   </data>
 
   <data name="UserGuidelinesText" xml:space="preserve">
     <value>User Guidelines Text</value>
   </data>
   <data name="UserGuidelinesTextDesc" xml:space="preserve">
-    <value>Text shown to the end user as usage guidelines.</value>
+    <value>Text shown to the end user as usage guidelines (Card mode only).</value>
   </data>
 
   <data name="ShowStatus" xml:space="preserve">
     <value>Show Status</value>
   </data>
   <data name="ShowStatusDesc" xml:space="preserve">
-    <value>Show or hide the status panel.</value>
+    <value>Show or hide the status panel below the dropzone (Card mode only).</value>
   </data>
 
   <data name="IncludeFileName" xml:space="preserve">
@@ -69,32 +82,53 @@
     <value>Include the source file name on each parsed row.</value>
   </data>
 
-  <data name="ChooseFilesText" xml:space="preserve">
-    <value>Choose Files Text</value>
+  <data name="DropzonePrimaryText" xml:space="preserve">
+    <value>Dropzone Primary Text</value>
   </data>
-  <data name="ChooseFilesTextDesc" xml:space="preserve">
-    <value>Custom label for the file picker button.</value>
-  </data>
-
-  <data name="NoFileChosenText" xml:space="preserve">
-    <value>No File Chosen Text</value>
-  </data>
-  <data name="NoFileChosenTextDesc" xml:space="preserve">
-    <value>Custom label shown when no file has been selected.</value>
+  <data name="DropzonePrimaryTextDesc" xml:space="preserve">
+    <value>Primary text shown inside the dropzone (Card mode only).</value>
   </data>
 
-  <data name="ParseButtonText" xml:space="preserve">
-    <value>Parse Button Text</value>
+  <data name="DropzoneHintText" xml:space="preserve">
+    <value>Dropzone Hint Text</value>
   </data>
-  <data name="ParseButtonTextDesc" xml:space="preserve">
-    <value>Custom label for the parse button.</value>
+  <data name="DropzoneHintTextDesc" xml:space="preserve">
+    <value>Small hint text shown below the dropzone primary text (Card mode only).</value>
   </data>
 
-  <data name="ClearButtonText" xml:space="preserve">
-    <value>Clear Button Text</value>
+  <data name="ButtonText" xml:space="preserve">
+    <value>Button Text</value>
   </data>
-  <data name="ClearButtonTextDesc" xml:space="preserve">
-    <value>Custom label for the clear button.</value>
+  <data name="ButtonTextDesc" xml:space="preserve">
+    <value>Label for the import button (Button mode only).</value>
+  </data>
+
+  <data name="RemoveButtonText" xml:space="preserve">
+    <value>Remove Button Text</value>
+  </data>
+  <data name="RemoveButtonTextDesc" xml:space="preserve">
+    <value>Label for the remove file button on the file chip (Card mode only).</value>
+  </data>
+
+  <data name="AccentColor" xml:space="preserve">
+    <value>Accent Color</value>
+  </data>
+  <data name="AccentColorDesc" xml:space="preserve">
+    <value>Primary accent color used for interactive highlights (link, hover border, focus). Hex format (e.g. #323130).</value>
+  </data>
+
+  <data name="BackgroundColor" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="BackgroundColorDesc" xml:space="preserve">
+    <value>Background color of the card or button. Hex format (e.g. #ffffff).</value>
+  </data>
+
+  <data name="BorderColor" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="BorderColorDesc" xml:space="preserve">
+    <value>Border color of the card or button. Hex format (e.g. #e1dfdd).</value>
   </data>
 
   <data name="AllowMultipleFiles" xml:space="preserve">
