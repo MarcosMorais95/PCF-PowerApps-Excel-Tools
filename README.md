@@ -281,7 +281,8 @@ The test harness opens at `http://localhost:8181/` with a sandboxed Canvas-like 
 ```powershell
 cd Solution
 dotnet build --configuration Release
-# Output: Solution\bin\Release\PCFExcelTools.zip
+# Output: Solution\bin\Release\PCFExcelTools_<version>.zip
+# (version is read from Solution\src\Other\Solution.xml at build time)
 ```
 
 This single `.zip` contains **both** controls.
@@ -297,7 +298,7 @@ pac auth select --name PCF-Dev
 
 ```powershell
 pac solution import `
-  --path Solution\bin\Release\PCFExcelTools.zip `
+  --path Solution\bin\Release\PCFExcelTools_<version>.zip `
   --activate-plugins `
   --force-overwrite `
   --publish-changes

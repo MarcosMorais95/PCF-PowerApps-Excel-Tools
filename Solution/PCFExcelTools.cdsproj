@@ -53,4 +53,19 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.targets" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.targets')" />
 
+  <!-- Rename the packaged solution zip to include the version from Solution.xml -->
+  <Target Name="VersionPackageOutput" AfterTargets="Build" Condition="Exists('$(SolutionPackageZipFilePath)')">
+    <XmlPeek XmlInputPath="$(MSBuildThisFileDirectory)src\Other\Solution.xml"
+             Query="/ImportExportXml/SolutionManifest/Version/text()">
+      <Output TaskParameter="Result" ItemName="_SolutionVersionItems" />
+    </XmlPeek>
+    <PropertyGroup>
+      <SolutionVersion>@(_SolutionVersionItems)</SolutionVersion>
+      <VersionedZipPath>$(OutputPath)$(MSBuildProjectName)_$(SolutionVersion).zip</VersionedZipPath>
+    </PropertyGroup>
+    <Move SourceFiles="$(SolutionPackageZipFilePath)"
+          DestinationFiles="$(VersionedZipPath)" />
+    <Message Text="Solution package: $(VersionedZipPath)" Importance="high" />
+  </Target>
+
 </Project>
