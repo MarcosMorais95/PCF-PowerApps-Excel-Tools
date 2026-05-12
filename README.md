@@ -232,7 +232,7 @@ The `Solution/` project is a standard Dataverse solution that references the two
 
 | Solution attribute | Value |
 |---|---|
-| Unique name | `PCFExportTools` |
+| Unique name | `PCFExcelTools` |
 | Display name | Excel Tools PCF |
 | Publisher name | `marcosmorais` |
 | Customization prefix | `mm` |
@@ -281,7 +281,7 @@ The test harness opens at `http://localhost:8181/` with a sandboxed Canvas-like 
 ```powershell
 cd Solution
 dotnet build --configuration Release
-# Output: Solution\bin\Release\PCFExportTools.zip
+# Output: Solution\bin\Release\PCFExcelTools.zip
 ```
 
 This single `.zip` contains **both** controls.
@@ -297,7 +297,7 @@ pac auth select --name PCF-Dev
 
 ```powershell
 pac solution import `
-  --path Solution\bin\Release\PCFExportTools.zip `
+  --path Solution\bin\Release\PCFExcelTools.zip `
   --activate-plugins `
   --force-overwrite `
   --publish-changes
