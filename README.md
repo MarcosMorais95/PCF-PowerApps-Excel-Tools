@@ -1,4 +1,4 @@
-# Excel Tools PCF
+<img width="599" height="425" alt="image" src="https://github.com/user-attachments/assets/d934fe93-d7bc-46d5-8f95-91e923cf5fa4" /># Excel Tools PCF
 
 > Two production-grade PowerApps Component Framework (PCF) controls that bring real Excel import/export to Canvas Apps — packaged in a single Dataverse solution.
 
@@ -18,6 +18,8 @@ Canvas Apps cannot natively read or write `.xlsx` files. The usual workaround is
 - Cannot trigger a real client-side download.
 
 These two controls solve the problem entirely on the client: the user picks a file (or clicks a button) and the data flows directly into / out of the app — no flow, no connector, no round trip.
+
+<img width="599" height="425" alt="image" src="https://github.com/user-attachments/assets/75502563-b4e8-433d-92ea-98c100a0df86" />
 
 ---
 
