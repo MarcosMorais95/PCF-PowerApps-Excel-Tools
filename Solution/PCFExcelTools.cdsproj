@@ -21,7 +21,7 @@
     Solution Localization Control, if you want to enabled localization of your solution, un-comment SolutionPackageEnableLocalization and set the value to true. - Requires use of -loc flag on Solution Clone or Sync
   -->
   <PropertyGroup>
-    <SolutionPackageType>Unmanaged</SolutionPackageType>
+    <SolutionPackageType>Managed</SolutionPackageType>
   </PropertyGroup>
 
   <ItemGroup>
