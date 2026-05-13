@@ -1,5 +1,3 @@
-<img width="599" height="425" alt="image" src="https://github.com/user-attachments/assets/d934fe93-d7bc-46d5-8f95-91e923cf5fa4" /># Excel Tools PCF
-
 > Two production-grade PowerApps Component Framework (PCF) controls that bring real Excel import/export to Canvas Apps — packaged in a single Dataverse solution.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
