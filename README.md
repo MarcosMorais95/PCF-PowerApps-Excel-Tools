@@ -141,13 +141,17 @@ A styled button that converts a JSON payload into a real `.xlsx` workbook and tr
 
 **Sample Power Fx — array of objects**
 
+Uses `colImported` populated by the import sample above.
+
 ```powerfx
-ExportToExcel1.dataJson  = JSON(colMyData, JSONFormat.IgnoreBinaryData);
-ExportToExcel1.fileName  = "Customers";
-ExportToExcel1.sheetName = "Customer list";
+ExportToExcel1.dataJson  = JSON(colImported, JSONFormat.IgnoreBinaryData);
+ExportToExcel1.fileName  = "Contacts";
+ExportToExcel1.sheetName = "Contacts";
 ```
 
 **Sample Power Fx — mapped columns (friendly headers)**
+
+Same collection, with explicit column labels for the exported file.
 
 ```powerfx
 Set(
@@ -155,12 +159,13 @@ Set(
     JSON(
         {
             columns: [
-                { name: "Customer name", field: "CustomerName" },
-                { name: "Total spend",   field: "Total" }
+                { name: "Full Name", field: "Name"  },
+                { name: "E-mail",    field: "Email" },
+                { name: "Age",       field: "Age"   }
             ],
             rows: ForAll(
-                colMyData,
-                { CustomerName: Customer, Total: TotalSpend }
+                colImported,
+                { Name: Name, Email: Email, Age: Age }
             )
         },
         JSONFormat.IgnoreBinaryData
