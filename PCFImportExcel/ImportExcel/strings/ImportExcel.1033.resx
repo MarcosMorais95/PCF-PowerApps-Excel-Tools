@@ -173,6 +173,13 @@
     <value>Enable detailed trace logging on the trace output property.</value>
   </data>
 
+  <data name="ResetSignal" xml:space="preserve">
+    <value>Reset Signal</value>
+  </data>
+  <data name="ResetSignalDesc" xml:space="preserve">
+    <value>Toggle this value to reset the control and clear all selected files. Use Set(varReset, !varReset) on a button.</value>
+  </data>
+
   <data name="JsonResult" xml:space="preserve">
     <value>JSON Result</value>
   </data>

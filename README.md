@@ -1,6 +1,6 @@
 # Excel Tools PCF
 
-> Two production-grade PowerApps Component Framework (PCF) controls that bring real Excel import/export to Canvas Apps and Model-driven forms — packaged in a single Dataverse solution.
+> Two production-grade PowerApps Component Framework (PCF) controls that bring real Excel import/export to Canvas Apps — packaged in a single Dataverse solution.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -28,6 +28,7 @@ These two controls solve the problem entirely on the client: the user picks a fi
   - [PCFExportToExcel — JSON → .xlsx](#pcfexporttoexcel--json--xlsx)
 - [Architecture](#architecture)
 - [Project structure](#project-structure)
+- [Download](#download)
 - [Getting started](#getting-started)
 - [Build and deploy](#build-and-deploy)
 - [License](#license)
@@ -65,8 +66,9 @@ Lets the user pick one or more Excel/CSV files in the browser, parses them **aut
 | `sheetIndex` | Whole | `0` | Zero-based worksheet index (range mode only) |
 | `allowMultipleFiles` | TwoOptions | `false` | Allow the user to select more than one file at a time |
 | `maxRowsToScan` | Whole | `50` | Rows to scan when detecting the header (5–200) |
-| `includeFileName` | TwoOptions | `false` | Include the source filename on each parsed row |
+| `includeFileName` | TwoOptions | `false` | Include the source fileName on each parsed row |
 | `enableTrace` | TwoOptions | `false` | Enable detailed trace logging |
+| `resetSignal` | TwoOptions | — | Toggle this value to reset the control and clear all selected files |
 | `showTitle` / `title` | TwoOptions / Text | `true` / — | Show and customize the component title (Card mode) |
 | `showUserGuidelines` / `userGuidelinesText` | TwoOptions / Multiple | `true` / — | Show usage instructions (Card mode) |
 | `showStatus` | TwoOptions | `true` | Show the status panel (Card mode) |
@@ -119,7 +121,7 @@ A styled button that converts a JSON payload into a real `.xlsx` workbook and tr
 - **Flexible input shapes** — array of objects, array of arrays, single object, primitive, or a mapped-columns payload (`{ columns: [...], rows: [...] }`) for friendly headers + explicit field keys.
 - **Auto-filter** enabled on the exported sheet by default.
 - **Fully styled** — width, height, font size, colors, border radius, icon visibility — all bindable from Canvas.
-- **Smart filenames** — auto-generates a timestamped name if none is provided; ensures the `.xlsx` extension.
+- **Smart fileNames** — auto-generates a timestamped name if none is provided; ensures the `.xlsx` extension.
 
 **Inputs**
 
@@ -174,8 +176,8 @@ ExportToExcel1.dataJson        = varExportPayload;
 
 ```
 ┌─────────────────────┐                ┌──────────────────────┐
-│   Canvas / Model-   │   inputs  ─►   │                      │
-│   driven app        │                │   PCF control        │
+│   Canvas App        │   inputs  ─►   │                      │
+│                     │                │   PCF control        │
 │                     │   ◄─ outputs   │   (TypeScript)       │
 └─────────────────────┘                └──────────┬───────────┘
                                                   │
@@ -238,6 +240,24 @@ The `Solution/` project is a standard Dataverse solution that references the two
 | Customization prefix | `mm` |
 | Package type | Unmanaged (Dev) |
 | Version | `1.1.0` |
+
+---
+
+## Download
+
+The easiest way to get started is to download the ready-to-import solution from the [**Releases page**](https://github.com/MarcosMorais95/PCF-PowerApps-Excel-Tools/releases).
+
+Each release ships a single `.zip` (`PCFExcelTools_<version>.zip`) that contains both controls. No build step required.
+
+```powershell
+pac solution import `
+  --path PCFExcelTools_<version>.zip `
+  --activate-plugins `
+  --force-overwrite `
+  --publish-changes
+```
+
+> See [Add a control to a Canvas App](#add-a-control-to-a-canvas-app) for the next step after importing.
 
 ---
 
@@ -311,6 +331,10 @@ pac solution import `
 1. In the maker portal, open your app → **Insert** → **Get more components** → **Code** tab.
 2. Pick **Import Excel** and/or **Export to Excel** from the **Excel Tools PCF** solution.
 3. Drop the control onto a screen and bind its properties via the formula bar.
+
+### Test file
+
+A sample file [`SampleData.xlsx`](SampleData.xlsx) is included in the repository. It contains **100 records** on sheet `tab01` with the same columns used in the Power Fx samples above (`Name`, `Email`, `Age`), so you can drop it straight into the import control and run the code examples without any changes.
 
 ### Version bumps before re-deploy
 

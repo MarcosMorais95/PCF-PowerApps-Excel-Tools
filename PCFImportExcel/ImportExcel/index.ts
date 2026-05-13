@@ -94,6 +94,7 @@ export class ImportExcel implements ComponentFramework.StandardControl<IInputs, 
   private traceEntries: TraceEntry[] = [];
   private isParsing = false;
   private lastResultSummary: { rows: number; cols: number | null } | null = null;
+  private _lastResetSignal: boolean | null = null;
 
   public init(
     context: ComponentFramework.Context<IInputs>,
@@ -104,6 +105,8 @@ export class ImportExcel implements ComponentFramework.StandardControl<IInputs, 
     this.context = context;
     this.notifyOutputChanged = notifyOutputChanged;
     this.hostContainer = container;
+
+    this._lastResetSignal = context.parameters.resetSignal?.raw ?? false;
 
     this.injectStylesOnce();
 
@@ -119,6 +122,12 @@ export class ImportExcel implements ComponentFramework.StandardControl<IInputs, 
 
   public updateView(context: ComponentFramework.Context<IInputs>): void {
     this.context = context;
+
+    const resetSignal = context.parameters.resetSignal?.raw ?? false;
+    if (this._lastResetSignal !== null && resetSignal !== this._lastResetSignal) {
+      this.clearSelection();
+    }
+    this._lastResetSignal = resetSignal;
 
     const allowMultiple = this.getAllowMultipleFiles();
     this.fileInput.multiple = allowMultiple;

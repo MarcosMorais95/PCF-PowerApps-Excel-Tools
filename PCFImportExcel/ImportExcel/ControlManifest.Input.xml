@@ -3,7 +3,7 @@
   <control
     namespace="PCFImportExcel"
     constructor="ImportExcel"
-    version="1.1.0"
+    version="1.1.1"
     display-name-key="ImportExcel"
     description-key="ImportExcelDesc"
     control-type="standard">
@@ -189,6 +189,14 @@
       name="enableTrace"
       display-name-key="EnableTrace"
       description-key="EnableTraceDesc"
+      of-type="TwoOptions"
+      usage="input"
+      required="false" />
+
+    <property
+      name="resetSignal"
+      display-name-key="ResetSignal"
+      description-key="ResetSignalDesc"
       of-type="TwoOptions"
       usage="input"
       required="false" />
