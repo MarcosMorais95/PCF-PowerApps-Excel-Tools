@@ -61,7 +61,7 @@
     </XmlPeek>
     <PropertyGroup>
       <SolutionVersion>@(_SolutionVersionItems)</SolutionVersion>
-      <VersionedZipPath>$(OutputPath)$(MSBuildProjectName)_$(SolutionVersion).zip</VersionedZipPath>
+      <VersionedZipPath>$(OutputPath)$(MSBuildProjectName)_$(SolutionVersion)_managed.zip</VersionedZipPath>
     </PropertyGroup>
     <Move SourceFiles="$(SolutionPackageZipFilePath)"
           DestinationFiles="$(VersionedZipPath)" />

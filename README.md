@@ -252,11 +252,11 @@ The `Solution/` project is a standard Dataverse solution that references the two
 
 The easiest way to get started is to download the ready-to-import solution from the [**Releases page**](https://github.com/MarcosMorais95/PCF-PowerApps-Excel-Tools/releases).
 
-Each release ships a single `.zip` (`PCFExcelTools_<version>.zip`) that contains both controls. No build step required.
+Each release ships a single **Managed** `.zip` (`PCFExcelTools_<version>_managed.zip`) that contains both controls. No build step required.
 
 ```powershell
 pac solution import `
-  --path PCFExcelTools_<version>.zip `
+  --path PCFExcelTools_<version>_managed.zip `
   --activate-plugins `
   --force-overwrite `
   --publish-changes
@@ -306,7 +306,7 @@ The test harness opens at `http://localhost:8181/` with a sandboxed Canvas-like 
 ```powershell
 cd Solution
 dotnet build --configuration Release
-# Output: Solution\bin\Release\PCFExcelTools_<version>.zip
+# Output: Solution\bin\Release\PCFExcelTools_<version>_managed.zip
 # (version is read from Solution\src\Other\Solution.xml at build time)
 ```
 
@@ -323,7 +323,7 @@ pac auth select --name PCF-Dev
 
 ```powershell
 pac solution import `
-  --path Solution\bin\Release\PCFExcelTools_<version>.zip `
+  --path Solution\bin\Release\PCFExcelTools_<version>_managed.zip `
   --activate-plugins `
   --force-overwrite `
   --publish-changes
